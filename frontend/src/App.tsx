@@ -1,34 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React from "react";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
-}
+    <div className="app">
+      {/* Sidebar */}
+      <aside className="sidebar">
+        <div className="logo">
+          <img src="/path-to-logo.png" alt="PantryPal Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li>🏠</li>
+            <li>🔍</li>
+            <li>🔖</li>
+          </ul>
+        </nav>
+      </aside>
 
-export default App
+      {/* Main Content */}
+      <main className="main-content">
+        <header className="header">
+          <h1>Welcome to PantryPal</h1>
+          <h2></h2>
+          <div className="search-bar">
+            <input type="text" placeholder="Search for recipes" />
+            <button>🔍</button>
+          </div>
+        </header>
+
+        <section className="trending-recipes">
+          <h2>Trending Recipes:</h2>
+          <div className="recipes-grid">
+            {Array.from({ length: 3 }).map((_, index) => (
+              <div key={index} className="recipe-card">
+                <div className="recipe-placeholder">📷</div>
+                <p>Recipe Name</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+};
+
+export default App;
