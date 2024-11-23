@@ -22,7 +22,7 @@ const App: React.FC = () => {
       <main className="main-content">
         <header className="header">
           <h1>Welcome to PantryPal</h1>
-          <h2></h2>
+          <h2>Input your ingredients to find recipes</h2>
           <div className="search-bar">
             <input type="text" placeholder="Search for recipes" />
             <button>🔍</button>
