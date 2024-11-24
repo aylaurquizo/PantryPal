@@ -38,3 +38,4 @@ def UserRoutes(app: Flask, supabase: Client):
             return jsonify({"message": "Ingredient added successfully"}), 201
         finally:
             connection.close()
+
