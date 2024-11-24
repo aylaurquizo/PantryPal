@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Searchbar from "./components/Searchbar";
 
 const App: React.FC = () => {
   return (
@@ -23,10 +24,7 @@ const App: React.FC = () => {
         <header className="header">
           <h1>Welcome to PantryPal</h1>
           <h2>Input your ingredients to find recipes</h2>
-          <div className="search-bar">
-            <input type="text" placeholder="Search for recipes" />
-            <button>🔍</button>
-          </div>
+          <Searchbar/>
         </header>
 
         <section className="trending-recipes">

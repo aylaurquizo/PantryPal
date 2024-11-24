@@ -14,7 +14,7 @@ const Searchbar: React.FC = () => {
     const user_id = 1;
 
     try {
-      const response = await fetch("/add_ingredient", {
+      const response = await fetch("http://127.0.0.1:5000/add_ingredient", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -58,6 +58,8 @@ const Searchbar: React.FC = () => {
       {message && <p className="feedback-message">{message}</p>}
     </div>
   );
+
+  
 };
 
 export default Searchbar;

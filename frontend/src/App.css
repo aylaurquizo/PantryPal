@@ -70,6 +70,7 @@ body {
 .search-bar input {
   border: none;
   background: none;
+  color: black;
   padding: 5px;
   outline: none;
   flex: 1;

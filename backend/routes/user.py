@@ -1,10 +1,13 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from supabase import Client
+from db_utils import get_db_connection
 
 def UserRoutes(app: Flask, supabase: Client):
     @app.route('/add_ingredient', methods=['POST'])
     def add_ingredient():
+        print("Added ingredient")
         data = request.json
+        print(data)
         user_id = data.get('user_id')
         ingredient_name = data.get('ingredient_name')
 
